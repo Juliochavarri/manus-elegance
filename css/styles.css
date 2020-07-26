@@ -1,5 +1,17 @@
+h2 {
+    color: plum;
+}
+
 .navbar {
     background-color: pink !important;
+}
+
+.link-novedades:hover {
+    box-shadow: 0 0 8px 2px pink;
+}
+
+.vermas:hover {
+    color: pink !important;
 }
 
 footer {
