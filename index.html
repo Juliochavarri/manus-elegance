@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,13 +33,13 @@
               </ul>
 
               <ul class="navbar-nav mr-right">
-                <li class="nav-item">
+                <li id="modalVenta" class="nav-item">
                   <a class="nav-link" href="#"><span class="fa fa-map-marker fa-lg"></span> Puntos de Venta</a>
                 </li>
-                <li class="nav-item">
+                <li id="modalContacto" class="nav-item">
                   <a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contacto</a>
                 </li>
-                <li class="nav-item">
+                <li id="modalNosotros" class="nav-item">
                   <a class="nav-link" href="#"><span class="fa fa-info fa-lg"></span> Nosotros</a>
                 </li>
               </ul>
@@ -47,12 +47,137 @@
           </nav>
     </header>
 
+    <!-- MODAL PUNTOS DE VENTA -->
+    <div class="modal fade" id="modal-venta" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><span class="fa fa-map-marker"></span> PUNTOS DE VENTA</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="bg-plum text-center text-white p-2 ml-2 mr-2">
+            <p>TIENDA PRINCIPAL</p>
+            <p>Jiron Mariscal Luzuriaga 355 Interior 103-110-111-128-136, Jesús María 15072</p>
+            <small>Galería Center</small>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7803.083752909988!2d-77.050143!3d-12.07501!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9c37b9f3cf906034!2sManu&#39;s%20Elegance%20Galeria%20Center!5e0!3m2!1ses-419!2spe!4v1595783955317!5m2!1ses-419!2spe" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CONTACTO -->
+    <div class="modal fade" id="modal-contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><span class="fa fa-address-card"></span> ESCRÍBENOS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="container">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputPassword1"><strong>Nombres</strong></label>
+                <input type="name" class="form-control" id="exampleInputPassword1" placeholder="Nombres">
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"><strong>Correo</strong></label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico">
+                <small id="emailHelp" class="form-text text-muted">No compartimos tu email con nadie.</small>
+              </div>
+              
+              <div class="form-group">
+                <label for="exampleInputPassword1"><strong>Mensaje</strong></label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe aquí tu mensaje..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-plum mb-3 text-white">ENVIAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL NOSOTROS -->
+    <div class="modal fade" id="modal-nosotros" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><span class="fa fa-info"></span> NOSOTROS</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body d-flex justify-content-center">
+            <img src="/img/logo.svg" alt="Logo Manu's Elegance" width="132" height="64">
+          </div>
+          <div class="bg-plum text-center text-white p-2 ml-2 mr-2 mb-2">
+            <p>Joven diseñadora y emprendedora peruana, que ofrece a través de sus modelos innovadores una línea exclusiva de ropa; en nuestras tiendas encontrará
+               ropa para distinguirse y el mejor trato para su 
+               comodidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARRUSEL -->
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="3600">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel" data-slide-to="1"></li>
+        <li data-target="#carousel" data-slide-to="2"></li>
+        <li data-target="#carousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/banner/banner-1.jpg" class="d-block w-100" alt="...">
+          <div class="card-img-overlay overlay-banner-1">
+            <img class="img-fluid d-block" src="/img/logo.svg" alt="Logo Manu's Elegance" width="132" height="32">
+            <button type="button" class="btn btn-outline-dark mt-2">DESCUBRIR MÁS</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner/banner-2.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-banner-2">
+            <img class="img-fluid d-block" src="/img/logo.svg" alt="Logo Manu's Elegance" width="132" height="32">
+            <button type="button" class="btn btn-outline-dark mt-2">DESCUBRIR MÁS</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner/banner-3.jpg" class="d-block w-100" alt="...">
+          <div class="card-img-overlay overlay-banner-1">
+            <img class="img-fluid d-block" src="/img/logo.svg" alt="Logo Manu's Elegance" width="132" height="32">
+            <button type="button" class="btn btn-outline-dark mt-2">DESCUBRIR MÁS</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/banner/banner-4.jpg" class="d-block w-100" alt="...">
+          <div class="overlay-banner-2">
+            <img class="img-fluid d-block" src="/img/logo.svg" alt="Logo Manu's Elegance" width="132" height="32">
+            <button type="button" class="btn btn-outline-dark mt-2">DESCUBRIR MÁS</button>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
     <main>
       <div class="d-flex flex-column align-items-center">
         <section class="novedades mt-4">
           <h2 class="text-center">NOVEDADES</h2>
           <div class="row">
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center">
               <a class="btn link-novedades" role="button" href="#">
                 <div class="card" style="width: 18rem;">
                   <img src="/img/novedades/BLZ001A-500x600.jpg" class="card-img-top img-fluid" alt="saco largo">
@@ -62,7 +187,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center">
               <a class="btn link-novedades" role="button" href="#">
                 <div class="card" style="width: 18rem;">
                   <img src="/img/novedades/BLZ007A-500x600.jpg" class="card-img-top img-fluid" alt="saco largo">
@@ -72,7 +197,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center">
               <a class="btn link-novedades" role="button" href="#">
                 <div class="card" style="width: 18rem;">
                   <img src="/img/novedades/CSC009A-500x600.jpg" class="card-img-top img-fluid" alt="saco largo">
@@ -82,7 +207,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
+            <div class="col-12 col-sm-6 col-xl-3 d-flex justify-content-center">
               <a class="btn link-novedades" role="button" href="#">
                 <div class="card" style="width: 18rem;">
                   <img src="/img/novedades/SAC006A-500x600.jpg" class="card-img-top img-fluid" alt="saco largo">
@@ -145,23 +270,29 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-6 col-md-4">
+      <div class="container mt-3">
+        <div class="row d-flex justify-content-around">
+          <div class="text-center mt-3">
             <h5>CATEGORÍAS</h5>
-            <ul class="list-unstyled">
-              <li>Novedades</li>
-              <li>Abrigos</li>
-              <li>Blazers</li>
-              <li>Casacas</li>
-              <li>Chalecos</li>
-              <li>Chalinas</li>
-              <li>Poleras</li>
-              <li>Sacos</li>
-              <li>Vestidos</li>
-            </ul>
+            <div class="row">
+              <ul class="list-unstyled col-4">
+                <li>Novedades</li>
+                <li>Abrigos</li>
+                <li>Blazers</li>
+              </ul>
+              <ul class="list-unstyled col-4">
+                <li>Casacas</li>
+                <li>Chalecos</li>
+                <li>Chalinas</li>
+              </ul>
+              <ul class="list-unstyled col-4">
+                <li>Poleras</li>
+                <li>Sacos</li>
+                <li>Vestidos</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6 col-md-4">
+          <div class="text-center mt-3">
             <h5>NOSOTROS</h5>
             <div class="row">
             <ul class="list-unstyled">
@@ -171,30 +302,28 @@
             </ul>
             </div>
             <h5>SÍGUENOS</h5>
-            <div class="row text-center">
+            <div class="row d-flex justify-content-around">
               <a class="btn btn-social-icon btn-facebook mr-3" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook fa-lg"></i></a>
               <a class="btn btn-social-icon btn-instagram" href="http://google.com/+"><i class="fa fa-instagram fa-lg"></i></a>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="text-center mt-3">
             <h5>CONTACTO</h5>
-            <dl class="row">
-              <dt class="col-6">Dirección:</dt>
-              <dd class="col-6">Enrique Segoviano</dd>
-              <dt class="col-6">Teléfonos:</dt>
-              <dd class="col-6">981658350 / 981626580</dd>
-              <dt class="col-6">E-Mail:</dt>
-              <dd class="col-6">eavellaneda.uni@gmail.com</dd>
+            <dl class="d-flex flex-column">
+              <strong>Dirección: <small>Enrique Segoviano</small></strong>
+              <strong>Teléfonos: <small>981658350 / 981626580</small></strong>
+              <strong>E-Mail: <small>eavellaneda.uni@gmail.com</small></strong>
             </dl>
           </div>
         </div>
         </div>
-        <div class="row justify-content-center copyright">
-          <p>© Copyright 2020 Manu's Elegance</p>
+        <div class="row justify-content-center copyright mt-3">
+          <p class="m-0 p-1">© Copyright 2020 Manu's Elegance</p>
       </div>
     </footer>
 
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
 </body>
 </html>

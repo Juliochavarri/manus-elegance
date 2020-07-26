@@ -1,3 +1,11 @@
+body {
+    overflow-x: hidden;
+}
+
+.bg-plum, .btn-plum {
+    background-color: plum;
+}
+
 h2 {
     color: plum;
 }
@@ -8,6 +16,21 @@ h2 {
 
 .link-novedades:hover {
     box-shadow: 0 0 8px 2px pink;
+}
+
+.carousel {
+    box-shadow: 0 8px 16px 0 plum;
+}
+
+.overlay-banner-1 {
+    position: absolute;
+    top: 360px;
+    left: 120px;
+}
+.overlay-banner-2 {
+    position: absolute;
+    top: 360px;
+    right: 236px;
 }
 
 .vermas:hover {
